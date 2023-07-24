@@ -1,3 +1,4 @@
+// Composable - simil a los custom Hooks en react
 import { ref, onMounted, computed } from 'vue'
 
 export default function useCripto() {
