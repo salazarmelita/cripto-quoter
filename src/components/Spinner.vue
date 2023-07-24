@@ -1,3 +1,4 @@
+<!-- revision of spinner -->
 <template>
     <div class="spinner">
         <div class="bounce1"></div>
