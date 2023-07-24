@@ -1,13 +1,14 @@
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 export default function useCripto() {
 
     const criptomonedas = ref([])
     const monedas = ref([
-        { codigo: 'USD', texto: 'Dolar de Estados Unidos'},
-        { codigo: 'MXN', texto: 'Peso Mexicano'},
-        { codigo: 'EUR', texto: 'Euro'},
-        { codigo: 'GBP', texto: 'Libra Esterlina'},
+        { codigo: 'USD', texto: 'Dolar de Estados Unidos' },
+        { codigo: 'MXN', texto: 'Peso Mexicano' },
+        { codigo: 'EUR', texto: 'Euro' },
+        { codigo: 'GBP', texto: 'Libra Esterlina' },
+        { codigo: 'CLP', texto: 'Peso Chileno' },
     ])
     const cotizacion = ref({})
     const cargando = ref(false)
@@ -16,14 +17,14 @@ export default function useCripto() {
         const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=20&tsym=USD'
         fetch(url)
             .then(respuesta => respuesta.json())
-            .then(({Data}) => criptomonedas.value = Data)
+            .then(({ Data }) => criptomonedas.value = Data)
     })
 
     const obtenerCotizacion = async (cotizar) => {
         cargando.value = true
         cotizacion.value = {}
         try {
-            const { moneda, criptomoneda } = cotizar
+            const { moneda, criptomoneda } = cotizar
             const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`
 
             const respuesta = await fetch(url)
@@ -48,5 +49,5 @@ export default function useCripto() {
         obtenerCotizacion,
         mostrarResultado
     }
-    
+
 }

@@ -5,6 +5,14 @@
   import Cotizacion from './components/Cotizacion.vue'
   import useCripto from './composables/useCripto'
 
+  // const monedas = ref([
+  //       { codigo: 'USD', texto: 'Dolar de Estados Unidos'},
+  //       { codigo: 'MXN', texto: 'Peso Mexicano'},
+  //       { codigo: 'EUR', texto: 'Euro'},
+  //       { codigo: 'GBP', texto: 'Libra Esterlina'},
+  //       { codigo: 'CLP', texto: 'Peso Chileno'},
+  // ])
+
   const { monedas, criptomonedas, cotizacion, cargando, obtenerCotizacion, mostrarResultado } = useCripto()
 
   const error = ref('')
