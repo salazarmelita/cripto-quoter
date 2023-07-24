@@ -28,6 +28,8 @@ const { monedas, criptomonedas, cotizacion, cargando, obtenerCotizacion, mostrar
 // })
 
 const error = ref('')
+
+// Creación de campos para captar información a utilizar
 const cotizar = reactive({
   moneda: '',
   criptomoneda: ''
