@@ -42,6 +42,7 @@ const cotizarCripto = () => {
     return
   }
   error.value = ''
+  console.log('Cotizando...')
   obtenerCotizacion(cotizar)
 }
 

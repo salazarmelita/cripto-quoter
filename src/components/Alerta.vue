@@ -1,3 +1,4 @@
+<!-- Uso de alerta - campos vacios -->
 <template>
     <div class="alerta">
         <slot></slot>
