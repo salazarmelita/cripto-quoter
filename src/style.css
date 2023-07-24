@@ -1,6 +1,6 @@
 :root {
     --blanco: #fff;
-    --primario: #50bdd8;
+    --primario: #50a6d8;
     --negro: #182339;
 }
 html {
@@ -8,17 +8,22 @@ html {
 }
 body {
     background-image: url(../img/back.jpg);
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 90vh;
     font-family: 'Outfit', sans-serif;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contenedor {
-    max-width: 80rem;
-    width: 95%;
+    max-width: 100rem;
+    width: 400px;
+    height: 100%;
+    padding-right: 400px;
     margin: 0 auto;
+    padding-top: 0px;
 }
 .titulo {
     font-size: 3.8rem;
